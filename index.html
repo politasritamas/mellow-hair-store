@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mellow Hair | แชมพูเพื่อผมสวย</title>
+  <meta name="description" content="เลือกแชมพู Mellow Hair สูตรอ่อนโยนและสูตรผมนุ่มลื่น">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">mellow<span>hair.</span></a>
+    <nav><a href="#products">สินค้า</a><a href="#how">วิธีสั่งซื้อ</a><a href="#order">สั่งซื้อ</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR EVERYDAY HAIR CARE</p>
+        <h1>ดูแลเส้นผม<br><em>ให้นุ่มสวย</em> ในทุกวัน</h1>
+        <p>เริ่มต้นวันดี ๆ ด้วยการดูแลเส้นผมอย่างอ่อนโยนจาก Mellow Hair</p>
+        <a class="primary-btn" href="#products">เลือกซื้อสินค้า</a>
+      </div>
+      <div class="hero-art"><div class="sun"></div><img src="assets/daily-shampoo.svg" alt="Mellow Daily Shampoo"></div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-heading"><p class="eyebrow">OUR COLLECTION</p><h2>เลือกสูตรที่ใช่สำหรับคุณ</h2><p>ผลิตภัณฑ์ Mellow Hair ขนาด 300 ml</p></div>
+      <div id="product-list" class="product-grid"><p class="muted">กำลังโหลดสินค้า…</p></div>
+    </section>
+
+    <section class="how section" id="how">
+      <p class="eyebrow">SIMPLE ORDER</p><h2>สั่งซื้อง่าย ๆ ใน 3 ขั้นตอน</h2>
+      <div class="steps"><div><b>01</b><h3>เลือกสินค้า</h3><p>เลือกสูตรและจำนวนที่ต้องการ</p></div><div><b>02</b><h3>กรอกที่อยู่</h3><p>ระบุชื่อ เบอร์โทร และที่อยู่จัดส่ง</p></div><div><b>03</b><h3>ยืนยันคำสั่งซื้อ</h3><p>ร้านได้รับข้อมูลเพื่อจัดเตรียมสินค้า</p></div></div>
+    </section>
+
+    <section class="section order-section" id="order">
+      <div class="section-heading"><p class="eyebrow">CHECKOUT</p><h2>แบบฟอร์มสั่งซื้อ</h2><p>กรอกข้อมูลให้ครบเพื่อให้จัดส่งได้ถูกต้อง</p></div>
+      <form id="order-form">
+        <div class="form-grid">
+          <label>ชื่อ-นามสกุล<input name="customerName" required placeholder="ชื่อผู้รับสินค้า"></label>
+          <label>เบอร์โทรศัพท์<input name="phone" required inputmode="tel" placeholder="08X-XXX-XXXX"></label>
+          <label class="wide">ที่อยู่จัดส่ง<textarea name="address" required rows="3" placeholder="บ้านเลขที่ ถนน ตำบล/แขวง อำเภอ/เขต จังหวัด รหัสไปรษณีย์"></textarea></label>
+          <label>สินค้า<select name="sku" id="sku-select" required></select></label>
+          <label>จำนวน<input name="quantity" type="number" min="1" value="1" required></label>
+        </div>
+        <p id="order-total" class="total">ยอดรวม: —</p>
+        <button class="primary-btn" type="submit">ยืนยันคำสั่งซื้อ</button>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </section>
+
+    <section class="section fulfillment">
+      <div class="section-heading"><p class="eyebrow">STORE OPERATIONS</p><h2>รายการเตรียมจัดส่ง</h2><p>ใช้ตรวจสอบออเดอร์สำหรับหยิบสินค้า แพ็ก และพิมพ์ใบปะหน้าพัสดุ</p></div>
+      <button id="refresh-orders" class="outline-btn" type="button">โหลดรายการล่าสุด</button>
+      <div class="table-wrap"><table><thead><tr><th>เลขที่ออเดอร์</th><th>ผู้รับ</th><th>สินค้า</th><th>จำนวน</th><th>ที่อยู่จัดส่ง</th><th>สถานะ</th><th>ใบปะหน้า</th></tr></thead><tbody id="orders-body"><tr><td colspan="7">เชื่อมต่อ Google Sheets เพื่อดูรายการออเดอร์</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#">mellow<span>hair.</span></a><p>Gentle care, everyday confidence.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
